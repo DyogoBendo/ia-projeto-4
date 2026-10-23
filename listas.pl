@@ -25,12 +25,6 @@ insere_lista_ordenada([Cabeca|Cauda], FronteiraAtual, NovaFronteira) :-
     insere_ordenado(Cabeca, FronteiraAtual, FronteiraIntermediaria),
     insere_lista_ordenada(Cauda, FronteiraIntermediaria, NovaFronteira).
 
-% concatena(Lista1, Lista2, ListaConcatenada): Concatena Lista1 com Lista2, obtendo ListaConcatenada.
-% concatena(?Lista1, ?Lista2, ?ListaConcatenada)
-concatena([], Lista, Lista).
-concatena([Elemento|Lista1], Lista2, [Elemento|Lista3]) :-
-    concatena(Lista1, Lista2, Lista3).
-
 % inverte_lista(Lista, ListaInvertida): Inverte Lista, produzindo ListaInvertida.
 % inverte_lista(+Lista, -ListaInvertida)
 inverte_lista(Lista, ListaInvertida) :-
