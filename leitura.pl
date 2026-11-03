@@ -15,8 +15,7 @@ carrega_arquivo(NomeArquivo) :-
 limpa_base :-
     retractall(estacao_inicial(_)),
     retractall(estacao_final(_)),
-    retractall(pode_ir(_, _, _)),
-    retractall(distLR(_, _, _)).
+    retractall(pode_ir(_, _, _)).
 
 % le_termos/0: Le recursivamente cada linha/termo ate encontrar end_of_file.
 % le_termos (0 parametros)
