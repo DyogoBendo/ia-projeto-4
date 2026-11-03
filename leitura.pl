@@ -1,7 +1,6 @@
 :- dynamic estacao_inicial/1.
 :- dynamic estacao_final/1.
-:- dynamic pode_ir/4.
-:- dynamic distLR/3.
+:- dynamic pode_ir/3.
 
 % carrega_arquivo(NomeArquivo): Abre o arquivo NomeArquivo, limpa fatos anteriores e carrega todos os termos para a base de conhecimento em memoria.
 % carrega_arquivo(+NomeArquivo)
@@ -16,7 +15,7 @@ carrega_arquivo(NomeArquivo) :-
 limpa_base :-
     retractall(estacao_inicial(_)),
     retractall(estacao_final(_)),
-    retractall(pode_ir(_, _, _, _)),
+    retractall(pode_ir(_, _, _)),
     retractall(distLR(_, _, _)).
 
 % le_termos/0: Le recursivamente cada linha/termo ate encontrar end_of_file.

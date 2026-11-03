@@ -1,35 +1,16 @@
 estacao_inicial(tttu).
 estacao_final(cataratas).
 
-pode_ir(tttu, centro, 2, linha_101).
-pode_ir(tttu, jardim_america, 4, linha_104).
-pode_ir(centro, tttu, 2, linha_101).
-pode_ir(centro, rodoviaria, 7, linha_105).
-pode_ir(centro, jardim_america, 1, linha_106).
-pode_ir(jardim_america, rodoviaria, 3, linha_107).
-pode_ir(jardim_america, bairro_norte, 9, linha_108).
-pode_ir(rodoviaria, aeroporto, 5, linha_109).
-pode_ir(rodoviaria, vila_yolanda, 4, linha_110).
-pode_ir(bairro_norte, portal_foz, 3, linha_111).
-pode_ir(vila_yolanda, cataratas, 10, linha_120).
-pode_ir(aeroporto, cataratas, 6, linha_112).
-pode_ir(portal_foz, cataratas, 5, linha_120).
-
-distLR(tttu, tttu, 0).
-distLR(centro, centro, 0).
-distLR(jardim_america, jardim_america, 0).
-distLR(rodoviaria, rodoviaria, 0).
-distLR(bairro_norte, bairro_norte, 0).
-distLR(aeroporto, aeroporto, 0).
-distLR(vila_yolanda, vila_yolanda, 0).
-distLR(portal_foz, portal_foz, 0).
-distLR(cataratas, cataratas, 0).
-
-distLR(tttu, cataratas, 15).
-distLR(centro, cataratas, 13).
-distLR(jardim_america, cataratas, 12).
-distLR(rodoviaria, cataratas, 9).
-distLR(bairro_norte, cataratas, 7).
-distLR(aeroporto, cataratas, 5).
-distLR(vila_yolanda, cataratas, 8).
-distLR(portal_foz, cataratas, 4).
+pode_ir(tttu, centro, 2).
+pode_ir(tttu, jardim_america, 4).
+pode_ir(centro, tttu, 2).
+pode_ir(centro, rodoviaria, 7).
+pode_ir(centro, jardim_america, 1).
+pode_ir(jardim_america, rodoviaria, 3).
+pode_ir(jardim_america, bairro_norte, 9).
+pode_ir(rodoviaria, aeroporto, 5).
+pode_ir(rodoviaria, vila_yolanda, 4).
+pode_ir(bairro_norte, portal_foz, 3).
+pode_ir(vila_yolanda, cataratas, 10).
+pode_ir(aeroporto, cataratas, 6).
+pode_ir(portal_foz, cataratas, 5).

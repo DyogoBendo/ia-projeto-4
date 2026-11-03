@@ -1,17 +1,6 @@
 estacao_inicial(tttu).
 estacao_final(cataratas).
 
-pode_ir(tttu, centro, 5, linha_101).
-pode_ir(centro, vila_yolanda, 8, linha_102).
-pode_ir(tttu, portal_foz, 10, linha_103).
-
-distLR(tttu, tttu, 0).
-distLR(centro, centro, 0).
-distLR(vila_yolanda, vila_yolanda, 0).
-distLR(portal_foz, portal_foz, 0).
-distLR(cataratas, cataratas, 0).
-
-distLR(tttu, cataratas, 20).
-distLR(centro, cataratas, 18).
-distLR(vila_yolanda, cataratas, 14).
-distLR(portal_foz, cataratas, 11).
+pode_ir(tttu, centro, 5).
+pode_ir(centro, vila_yolanda, 8).
+pode_ir(tttu, portal_foz, 10).
