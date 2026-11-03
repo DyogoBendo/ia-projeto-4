@@ -4,19 +4,19 @@ pertence(Elemento, [Elemento|_]) :- !.
 pertence(Elemento, [_|Cauda]) :-
     pertence(Elemento, Cauda).
 
-% insere_ordenado(Elemento, Lista, NovaLista): Insere Elemento na Lista, gerando NovaLista, ordenado por f(x).
+% insere_ordenado(Elemento, Lista, NovaLista): Insere Elemento na Lista, gerando NovaLista, ordenado pela distancia acumulada.
 % insere_ordenado(+Elemento, +Lista, -NovaLista)
 insere_ordenado(Elemento, [], [Elemento]) :- !.
 insere_ordenado(Elemento, [Cabeca|Cauda], [Elemento, Cabeca|Cauda]) :-
-    menor_ou_igual_f(Elemento, Cabeca),
+    menor_ou_igual_dist(Elemento, Cabeca),
     !.
 insere_ordenado(Elemento, [Cabeca|Cauda], [Cabeca|NovaCauda]) :-
     insere_ordenado(Elemento, Cauda, NovaCauda).
 
-% menor_ou_igual_f(No1, No2): Verdadeiro se o custo F1 de No1 for menor ou igual ao custo F2 de No2
-% menor_ou_igual_f(+No1, +No2)
-menor_ou_igual_f(no_fronteira(F1, _, _, _, _), no_fronteira(F2, _, _, _, _)) :-
-    F1 =< F2.
+% menor_ou_igual_dist(No1, No2): Verdadeiro se a distancia D1 de No1 for menor ou igual a distancia D2 de No2.
+% menor_ou_igual_dist(+No1, +No2)
+menor_ou_igual_dist(no_fronteira(D1, _, _), no_fronteira(D2, _, _)) :-
+    D1 =< D2.
 
 % insere_lista_ordenada(ListaElementos, FronteiraAtual, NovaFronteira): Insere todos os elementos de ListaElementos em FronteiraAtual, produzindo NovaFronteira.
 % insere_lista_ordenada(+ListaElementos, +FronteiraAtual, -NovaFronteira)
